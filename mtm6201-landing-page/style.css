@@ -1,0 +1,210 @@
+/*Sets the sizing of the logo image, and sets the margins around it*/
+.logo{
+    width: 80px;
+    margin: 10px 5% 47px 5%;
+}
+/*Removes the scooter image from the website (will be added once again later at the first breakpoint*/
+.scooter{
+    display: none;
+}
+/*Sets the background to the scooter image, sizes it, centers it and prevents it from repeating*/
+/*Also sets the font and font color for the website, and removes the margin*/
+body{
+    background-image: url("master-files-landing-page/images/bg-image/scooter.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    font-family: 'Montserrat', sans-serif;
+    color: #323030;
+    margin: 0;
+}
+/*Sets the margin to 5% on the left and right sides of the site.*/
+.content{
+    margin: 0 5%;
+}
+/*Stylizes the form on the body with a rounded white background and a drop shadow. Also adds margin to the bottom.*/
+.body-form{
+    background-color: #ffffff;
+    -webkit-box-shadow: 14px 14px 10px -7px rgba(0,0,0,0.32);  /*BOX SHADOW GENERATED FROM https://www.cssmatic.com/box-shadow*/
+    -moz-box-shadow: 14px 14px 10px -7px rgba(0,0,0,0.32);
+    box-shadow: 14px 14px 10px -7px rgba(0,0,0,0.32);  
+    border-radius: 20px;
+    margin-bottom: 60px;
+}
+/*Sets the margin around the contents of the form on the body*/
+.body-form-content{
+    margin: 2rem;
+}
+/*Sets the font weight, the font color and size, the background color, the padding in the button, rounds the edges, adds margin, and changes the cursor to pointer when its hovered over*/
+.drivebutton{
+    font-weight: bold;
+    color: #323030;
+    background-color: #55edab;
+    border: none;
+    font-size: 1.4rem;
+    padding: 8px 70px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+/*Sets the font weight, the font color and size, the background color, the padding in the button, rounds the edges, and changes the cursor to pointer when its hovered over*/
+.submitbutton{
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff837f;
+    border: none;
+    font-size: 1rem;
+    padding: 5px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/*Sets links on the page to orange, removing any text decorations they may have*/
+a,
+a:link,
+a:visited{
+    color: #ff837f;
+    text-decoration: none;
+}
+/*Sets the font size of the application class text, which is the text that holds the link. Also aligns it to the center*/
+.application{
+    font-size: 0.7rem;
+    text-align: center;
+}
+/*Sets the font weight, font size, and max width of header 1 text*/
+h1{
+    font-weight: 700;
+    font-size: 3.5rem;
+    max-width: 350px;
+}
+/*Sets the font weight, font size, and max width of header 2 text. Also removes some of the margin from the top of the text*/
+h2{
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: -20px;
+    max-width: 350px;
+}
+/*Sets the font weight and font size of header 3 text. Also sets the bottom margin so that it alligns properly with the rest of the text*/
+h3{
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: -0.5rem;
+}
+/*Removes the border, addings padding, sets the width to 100%, removes and adds margin to the top and bottom of the elements respectivley,
+and changes the color of the text for on the text email and telephone input boxes.*/
+input[type=text],
+input[type=email],
+input[type=tel]{
+    border: none;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: #9a9a9a;
+}
+/*Sets the font size and font color to the label tags*/
+label{
+    font-size: 13.33px;
+    color: #000000;
+}
+/*Sets the minimum width to 100%, sets the background color, and sets the font sizes of the text in the footer*/
+footer{
+    min-width: 100%;
+    background-color: #fefc8e;
+    font-size: 0.7rem;
+}
+/*Sets the font weight of the 'header' of sorts in the footer, as well as adds padding above it and takes away margin under it*/
+.footer-header{
+    font-weight: 700;
+    padding-top: 1.2rem;
+    margin-bottom: -5px;
+}
+/*Displays the two text input boxes in the footer inline, removes their padding and puts margin to the right of them to space them out*/
+.city, .hours{
+    display: inline-block;
+    padding: 0 0;
+    margin-right: 1rem;
+}
+/*Sets the width of the footer text imput to 70px*/
+.hours{
+    width: 70px;
+}
+/*Sets the padding for text inputs in the footer to 5 pixels*/
+.footer-form input[type=text]{
+    padding: 5px;
+}
+/*Adds the submit button to the row of inline text boxes, and sets adds padding under it*/
+.submit{
+    display: inline-block;
+    padding-bottom: 1.8rem;
+}
+/*Sets the left margin of all the social media icons to space them out properly, then sets their width to resize them,
+and sets the top margin to center them in the footer*/
+.instagram, .facebook, .twitter, .linkedin{
+    margin-left: 25px;
+    width: 20px;
+    margin-top: 60px;
+}
+/*Turns all the elements with this class into flexbox objetcs, and spaces them on different ends of the page using space between
+I also used flex wrap so that whem the objects dont have enough room to display side by side they just wrap horizontally*/
+.flex{
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 803px){
+    /*Removes the background image*/
+    body{
+        background-image: none
+    }
+    /*Brings back the previously removed scooter image, (NOT THE BACKGROUND)*/
+    .scooter{
+        display: unset;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+    /*Centers the objects that have flexbox applied to them now that that they are no longer inline*/
+    .flex{
+        justify-content: center
+    }
+    /*Changes the max width of heading 1 text, and sets the margin to auto*/
+    h1{
+        max-width: 75%;
+        margin: auto;
+    }
+    /*Changes the max width of heading 2 text, and sets the margin to auto*/
+    h2{
+        max-width: 75%;
+        margin: auto;
+    }
+    /*Decreases the size of the 'Drive with us button' so that the words dont wrap*/
+    .drivebutton{
+        padding: 8px 120px;
+    }
+}
+@media screen and (max-width: 656px){
+    /*Sets the margin above the social media icons to 10 pixels to space them evenly with the text forms and button above them,
+    and sets the padding under them to 1.8 now that they are at the bottom of the page*/
+    .instagram, .facebook, .twitter, .linkedin{
+        margin-top: 10px;
+        padding-bottom: 1.8rem;
+    }
+    /*Removes the padding under the footer button, now that the social media links are below at the bottom of the page and hold the padding instead*/
+    .submit{
+        padding-bottom: 0;
+    }
+}
+@media screen and (max-width: 526px){
+    /*Decreases the size of the 'Drive with us button' so that the words dont wrap*/
+    .drivebutton{
+        padding: 8px 80px;
+    }
+}
+@media screen and (max-width: 440px){
+    /*Decreases the size of the 'Drive with us button' so that the words dont wrap*/
+    .drivebutton{
+        padding: 8px 60px;
+    }
+}
