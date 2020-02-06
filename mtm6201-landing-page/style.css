@@ -102,7 +102,7 @@ input[type=tel]{
     color: #9a9a9a;
     border-radius: 15px;
     background-color: #f4f4f6;
-    padding-left: 10px;
+    padding-left: 11px;
 }
 /*Sets the font size and font color to the label tags*/
 label{
