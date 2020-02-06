@@ -100,6 +100,8 @@ input[type=tel]{
     margin-top: -10px;
     margin-bottom: 10px;
     color: #9a9a9a;
+    border-radius: 15px;
+    background-color: #f4f4f6;
 }
 /*Sets the font size and font color to the label tags*/
 label{
