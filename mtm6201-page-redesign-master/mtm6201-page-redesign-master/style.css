@@ -1,0 +1,156 @@
+/*Imports the fonts I use*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand&display=swap');
+
+/*Removes the styles on the nav bar, makes it responsive and changes the color*/
+nav#nav{
+    border: none;
+    background-color: #ffffff;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+/*Sets the color of the text on the nav bar, as well as the font. Also sets the text to uppercase*/
+.nav .nav-link{
+    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+}
+/*Changes the color of the nav bar text when it's hovered over*/
+.nav .nav-link:hover{
+    color: #f95759;
+}
+/*Stylizes the home page's fonts, and colors, as well makes the page responsive and fit to the full width of the page*/
+section#home.home{
+    background-color: #f95759;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    font-size: 25px;
+}
+/*Removes the margin on the main page and forces the width to 100%*/
+main#main.main{
+    margin: 0;
+    min-width: 100%;
+}
+/*Sets the margin on both sides of the paragraph's text*/
+section#home.home p,
+section#about.about p,
+section#contact.contact p,
+footer p{
+    margin-right: 10%;
+    margin-left: 10%;
+    width: 80%;
+}
+/*Sets the font propertys and margin of the main title text on the home page*/
+h1.page-title{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 4rem;
+}
+/*Removes the margin surrounding the entire perimeter of the page*/
+body{
+    margin: 0;
+}
+/*Sets the background color and font size on the about page*/
+section#about.about{
+    background-color: #cb484a;
+    font-size: 1rem;
+}
+/*Removes the float from the image and centers it. Also resizes the image to 80% it's original width*/
+img.about-image{
+    float: none;
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+/*Sets the font family, backgroudn color, and text color on the contact page*/
+section#contact.contact{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ab4141;
+    color: #ffffff;
+}
+/*Sets the font for the subheadings on the contact form*/
+div.contact-form-section{
+    font-family: 'Quicksand', sans-serif;
+}
+/*Sets the width of the contact form, as well as the padding and the background color*/
+form.contact-form{
+    width: 80%;
+    padding-left: 5px;
+    background-color: #ab4141;
+}
+/*Sets the font styles and the margin for all H2 headings*/
+h2.section-title{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 4rem;
+    margin: 20px 0;
+}
+/*Sets the background color, font size, color, and style, and adds padding to the top and bottom of the text*/
+footer{
+    background-color: #903737;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+    color: #ffffff;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+/***********************************************************
+                      BREAKPOINT ONE
+***********************************************************/
+@media screen and (min-width: 450px){
+/*Increases the height of the homepage's background color*/
+    section#home.home{
+        height: 29rem;
+    }
+/*Increases the margin at the top of the title text*/
+    h1.page-title{
+        margin-top: 50px;
+    }
+/*Decreases the width / size of the image on the about page*/
+    img.about-image{
+        width: 50%;
+    }
+/*Increases the size of the about and contact page font*/
+    section#about.about,
+    section#contact.contact{
+        font-size: 1.2rem;
+    }
+}
+/***********************************************************
+                      BREAKPOINT TWO
+***********************************************************/
+@media screen and (min-width: 850px){
+/*Increases the font size on a bigger screen, and changes the margin to space it out better*/
+    h1.page-title{
+        font-size: 7rem;
+        margin-bottom: 1rem;
+    } 
+/*Increases the text size on the main page, to fill in some of the blank space and make it more readable on this larger breakpoint.*/
+    section#home.home{
+        font-size: 30px;
+    }
+/*Increases the size of the about and contact page font*/
+    section#about.about,
+    section#contact.contact{
+        font-size: 1.5rem;
+    }
+/*Puts some more space under the heading text just to space them out a bit better*/
+    h2.section-title{
+        margin-bottom: 3rem;
+    }
+/*The image on the about page pushes the parahraph text to the right, so I wanted the header on that page to be alligned
+in the center of the paragraph text aswell. This pushes it over to do so.*/
+    section#about.about h2{
+        margin-left: 30%;
+    }
+/*Floats the image to the left, alligns the image to where I wanted, and then sets a fixed width. I made the width fixed beacuse
+with the float in place, I didn't want any unexpected changes.*/
+    img.about-image{
+        float: left;
+        width: 400px;
+        margin-top: -10rem;
+        margin-right: 0;
+    }
+}
