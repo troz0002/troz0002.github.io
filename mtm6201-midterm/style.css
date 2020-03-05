@@ -1,0 +1,674 @@
+/************************************************
+                    CSS RESET
+    http://meyerweb.com/eric/tools/css/reset/ 
+                 v2.0 | 20110126
+           License: none (public domain)
+************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/************************************************
+   HTML5 DISPLAY-ROLE RESET FOR OLDER BROWSERS 
+************************************************/
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section{
+	display: block;
+}
+body{
+	line-height: 1;
+}
+ol, ul{
+	list-style: none;
+}
+blockquote, q{
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after{
+	content: '';
+	content: none;
+}
+table{
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+/************************************************
+                  CSS RESET END
+************************************************/
+
+/*Sets the font and the text color for everything in the body*/
+body{
+    font-family: 'Raleway';
+    color: #3c3b3a;
+}
+/*Sets the margin of everything in the margin div. I wanted some elements to span the whole page, so I didn't include them in the div.*/
+.margin{ 
+    margin: 0 100px;
+}
+/*Sets the margin for the home card class. This is seperate so that it can be unset individually at a later breakpoint.*/
+.home-card-margin{
+    margin: 0 100px;
+}
+/*Sets the color of the header, and sets margin at the bottom of it.*/
+header{
+    background-color: #3c3b3a;
+    margin-bottom: 50px;
+}
+/*Sets the size of the site logo*/
+.logo{
+    width: 80px;
+    margin-left: 100px;
+}
+/*Sets the color of link's text, and removes any text decoration such as underlines from it.*/
+a,
+a:link,
+a:visited{
+    color: #ffffff;
+    text-decoration: none;
+}
+/*Floats the navigation links to the right of the page, and sets margins on it to space it out properly in the header.*/
+.nav{
+    float: right;
+    margin-top: 33px;
+    margin-right: 100px;
+}
+/*Puts margin inbetween the individual navigation links to space them out properly*/
+.nav-link{
+    margin-left: 2rem;
+
+}
+/*Applies the keyframe animation to it that lasts 1 second. This animation will repeat infinitely, alternate in order between colors, and will ease in and out so that the animation moves smoothly.*/
+.nav-link:hover{
+    animation-name: nav-link-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+/*Applies the keyframe animation to the navigation links. When hovered over, the links will alternate colors between green and it's usual white.*/
+@keyframes nav-link-animation{
+    0%{
+    color: #26a682;
+    }
+    100%{
+    color: #ffffff;
+    }
+  }
+/*Displays the navigation links horizontally.*/
+li{
+    display: inline;
+}
+/*Displays the active navigation link to bold to show that it is*/
+.current{
+    font-weight: bold;
+}
+/*Sets the line height on paragraph text.*/
+p{
+    line-height: 30px;
+}
+/*Sets the font size and the font boldness on heading 2 text.*/
+h2{
+    font-size: 72px;
+    font-weight: 700;
+}
+/*Sets the font size and the font boldness on heading 2 text.*/
+h3{
+    font-size: 56px;
+    font-weight: 700;
+}
+/*Sets the margin, font size, and line height for banner subtext.*/
+.banner-sub, .banner-sub-home{
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 1.3;
+}
+/*Sets margin at the bottom of the banner subtext on the homepage specifically.*/
+.banner-sub-home{
+    margin-bottom: 50px;
+}
+/*Applies the keyframe animation to specific buttons (all except for the one in the contact form due to color differences) that lasts 1 second. This animation will repeat infinitely, alternate in order between colors, and will ease in and out so that the animation moves smoothly.*/
+.home-card-button:hover, .home-banner-button:hover, .about-spread-button:hover{
+    animation-name: button-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+/*Applies the keyframe animation to the buttons. When hovered over, the buttons will alternate colors between it's usual green and purple.*/
+@keyframes button-animation{
+    0%{
+    background-color: #26a682;
+    }
+    100%{
+    background-color: #3f3d56;
+    }
+  }
+/*Sets the color, text color, sizing, margin, padding, and shadow on the button for the home banner. Also turns the cursor to a click cursor when hovered over.*/
+.home-banner-button{
+    background-color: #26a682;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    border: none;
+    border-radius: 40px;
+    padding: 5px 50px;
+    margin-top: 50px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 20px 17px -17px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 20px 17px -17px rgba(0,0,0,0.75);
+    box-shadow: 0px 20px 17px -17px rgba(0,0,0,0.75);
+}
+/*Sets the color, text color, sizing, margin and padding on the button for the home banner. Also turns the cursor to a click cursor when hovered over.*/
+.home-card-button, .about-spread-button{
+    background-color: #26a682;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 40px;
+    padding: 5px 25px;
+    cursor: pointer;
+}
+/*Floats the home page button for the card to the right of the page, and sets margin above it.*/
+.home-card-button{
+    float: right;
+    margin-top: 20px;
+}
+/*Sets the width of the entire home banner to 40% of the page to leave space for the image.*/
+.home-banner{
+    width: 40%;
+}
+/*Aligns the text with the home scroll class, and sets margin for adove and below it.*/
+.home-scroll{
+    text-align: center;
+    margin: 25px 0;
+}
+/*Centers the icons in the home banner in their divs alongside the text underneath them.*/
+.icons{
+    text-align: center;
+    display: inline-block;
+}
+/*Sylizes the image with the simon class, by centering it in it's div and setting the border radius to make the image a circle. Also sets an actual border around the picture*/
+.simon{
+    margin: 60px 0;
+    width: 8%;
+    height: 8%;
+    border-radius: 75px;
+    border: solid 5px #ffffff;  
+}
+/*Sets the boldness, max width, and padding of text with this class. Also centers it.*/
+.simon-bold{
+    font-weight: 700;
+    max-width: 9%;
+    text-align: center;
+    padding: 6% 0;
+}
+/*Sets the max width and padding of text with this class.*/
+.simon-text{
+    max-width: 60%;
+    padding: 6% 0;
+}
+/*Since the background of the simon section spans the whole width of the page, this wrap sets the margin of the elements specifically inside of the section so that it still has margin with the rest of the page.*/
+.simon-wrap{
+    margin: 0 100px;
+}
+/*Sets the width of the entire home banner to 50% of the page to leave space for the image.*/
+.about-banner{
+    max-width: 50%;
+}
+/*Sets the width of the main banner images on the home and about page to their max width.*/
+.about-img, .home-img{
+    max-width: 100%;
+}
+/*While the image is it's max width, these wraps only allow it to take up 50% of the width of the page so they can fit next to the banner text.*/
+.about-img-wrap, .home-img-wrap{
+    max-width: 50%;
+}
+/*Sets the height to a set ammount, and the width to 100% for this image as it will span the whole page. I used object fit cover to make the image fit the dimentions I gave it without distorting.*/
+.spread-about-img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 50px;
+}
+/*Sets the text's position to relative so that it can display overtop of the image, and aligns it in the center*/
+.about-banner-spread{
+    position: relative;
+    text-align: center;
+}
+/*Centers the text overtop of the images that span the about page.*/
+.centered{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Aligns the text in this class in the center, and sets it's boldness. Also adds padding to the top & bottom of the spread.*/
+.about-spread{
+    text-align: center;
+    font-weight: 600;
+    padding: 25px 0;
+}
+/*Adds margin to the left of the button to seperate it from the text beside it.*/
+.about-spread-button{
+    margin-left: 20px;
+}
+/*Sets the font size for text in this class, and displays it inline to that the button and the text can display next to eachother.*/
+.heading4-spread{
+    font-size: 35px;
+    display: inline-block;
+}
+/*Sets the width of these sections to 48%, to leave space for the image that wil go beside them. Also adds margin to the top and bottom.*/
+.card, .home-card{
+    width: 48%;
+    margin: 50px 0;
+}
+/*Sets the margin for the cards. This is seperate so that it can be unset individually at a later breakpoint.*/
+.card-wrap{
+    margin: 0 100px;
+}
+/*Sets the width of the images that will display alongside the cards, sets their heights, displays them as cover so that they don't warp, and sets the margin.*/
+.about-card-img, .home-card-img{
+    width: 48%;
+    object-fit: cover;
+    height: 250px;
+    margin: 50px 0;
+}
+/*Sets margin at the top and bottom of this section*/
+.special-thanks{
+    margin: 100px 0 50px 0;
+}
+/*Aligns the text in this class to the center of the page.*/
+.special-thanks-text{
+    text-align: center;
+}
+/*Sets the sizing for the logos on the about page, also auto sets the margins to space all four of the logos out evenly.*/
+.thanks-logo{
+    height: 120px;
+    margin-top: 50px;
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 100%;
+}
+/*Sets the color, text color, sizing, margin, padding, and shadow on the button for the contact form buttons, and floats it to the right. Also turns the cursor to a click cursor when hovered over.*/
+.contact-form-button{
+    background-color: #3c3b3a;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 40px;
+    padding: 10px;
+    width: 30%;
+    margin-top: 20px;
+    float: right;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 20px 17px -17px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 20px 17px -17px rgba(0,0,0,0.75);
+    box-shadow: 0px 20px 17px -17px rgba(0,0,0,0.75);
+}
+/*Sets the font size and weight, as well as makes the font italic in this class.*/
+.heading4-italic{
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+}
+/*Sets the font size and color of the fotn for text with this class.*/
+.heading4-green{
+    font-size: 30px;
+    color: #26a682;
+}
+/*Sets the text color for text with this class.*/
+.home-banner-sub{
+    color: #26a682;
+}
+/*Sets the sizing of the down arrow icon on the homepage.*/
+.fa-arrow-circle-down{
+    font-size: 25px;
+}
+/*Sets the background color and text color for the home and about spread.*/
+.about-spread, .home-spread{
+    background-color: #3c3b3a;
+    color: #ffffff;
+}
+/*Sets the width to 30% to fit all three elements in one row, and sets the the margin above & below them to space them out from other elements.*/
+.about-text-section{
+    width: 30%;
+    margin: 150px 0;
+}
+/*Sets the font color for text with this class to white.*/
+.heading4-spread, .about-banner-spread{
+    color: #ffffff;
+}
+/*Sets the contact location section to 50% of the screenpage*/
+.contact-location{
+    max-width: 50%;
+}
+/*Sets the contact banner section to 50% of the screenpage to allow room for the contact form next to it.*/
+.contact-banner{
+    max-width: 50%;
+}
+/*Sets the background color, the font color, the border radius, the padding, the width, and the margins of the contact form to stylize it. Also sets the autoflow to auto to allow the button that was floated in the form to stay inside the form.*/
+.contact-form{
+    background-color: #26a682;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 50px 25px;
+    width: 40%;
+    margin-bottom: 50px;
+    overflow: auto;
+}
+/*Sets the width of the image on the contact page, and adds margin above it to seperate it from the other elements on the page.*/
+.contact-img{
+    margin-top: 50px;
+    width: 72%;
+}
+/*Sets the padding on the contact forms text so that it lines up with the rest of the text on the contact page.*/
+.contact-form-text{
+    padding: 5px 0 5px 20px;
+}
+/*Stylizes the input sections for the contact form by setting their padding and border radius, and sets their width to fit the entirety of the form's width.*/
+input[type=text],
+input[type=email],
+input[type=tel]{
+    border: none;
+    padding: 15px 0;
+    padding-left: 20px;
+    border-radius: 25px;
+    width: calc(100% - 20px);
+}
+/*Sets the font family, and stylizes input section by setting their padding and with. Also locks it so that it can only be resizes vertically.*/
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    padding: 15px 0 30px 20px;
+    border-radius: 25px;
+    width: calc(100% - 20px);
+    resize: vertical;
+}
+/*Sets the margin for the Google Map. This is seperate so that it can be unset individually at a later breakpoint.*/
+.map-wrap{
+    margin: 50px 100px 50px 100px;
+}
+/*Sets the embeded Google Map's width to take up it's max width on the screen*/
+iframe{
+    width: 100%;
+}
+/*Sets the color of the footer, as well as the text inside of it. Then adds padding to the top and bottom of the footer for spacing.*/
+footer{
+    background-color: #3c3b3a;
+    color: #ffffff;
+    padding: 20px 0;
+}
+/*Alligns the footer text and icons in the center of the page*/
+.footer-media{
+    text-align: center;
+} 
+/*Spaces out the social media icons evenly*/
+.facebook, .twitter, .instagram, .youtube{ 
+    margin: 5px 5px 0 5px;
+}
+/*Displays elements with this class to flex, applys wrap to them, and spaces them out evenly with space-between.*/
+.flex, .flex-column{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+/*Reverses the direction of elements. I used this for one of the cards on the homepage, as I wanted to change the object order at the different breakpoint*/
+.row-reverse{
+    flex-direction: row-reverse;
+}
+/*Places the up button at bottom right corner, and then applies the keyframe animation to it that lasts 5 seconds. This animation will repeat infinitely, alternate in order between going up and down, and will ease in and out so that the animation moves smoothly.*/
+.top-btn{
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    z-index: 999;
+    animation-name: up-button-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+/*Resizes the up button*/
+.top-btn i:before{  
+    font-size: 50px;
+}
+/*Applies the keyframe animation to the scroll up button. This makes it move 25 pixels up, and then 25 pixels down from it's origin point.*/
+@keyframes up-button-animation{
+    0% { transform: translate(0, -25px);
+    }
+    100% { transform: translate(0, 25px);
+    }
+  }
+@media screen and (max-width: 930px){
+    /*Sets the margin of everything in the margin div. I wanted some elements to span the whole page, so I didn't include them in the div.*/
+    .margin{ 
+        margin: 0 50px;
+    }
+    /*Sets the width of the home banner to 100% of the screen width.*/
+    .home-banner{
+        width: 100%;
+    }
+    /*Centers the button in it's own row on the home page, and adds margin to the bottom of it.*/
+    .home-banner-button{
+        margin-left: 13%;
+        margin-right: 13%;
+        margin-bottom: 50px;
+        width: 74%;
+    }
+    /*Sets the home image's width to 80%, and centers it vertically on the page.*/
+    .home-img{
+        max-width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*Sets the width of the home cards to 100%, and removes their margin.*/
+    .home-card{
+        width: 100%;
+        margin: unset;
+    }
+    /*This sets the width of the home card's images to 100%, and gives it a set height. It also removes the margin and sets the object-fit to cover so that the image doesn't distort.*/
+    .home-card-img{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        margin: unset;
+    }
+    /*Sets margin at the bottom of the spread on the home page.*/
+    .home-spread{
+        margin-bottom: 50px;
+    }
+    /*Sets the margin under the card's buttons on the homepage.*/
+    .home-card-button{
+        margin: 50px;
+    }
+    /*Sets the width of the image, centers it vertically on the page, and adds margin above and below it.*/
+    .simon{
+        width: 150px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    /*Displays the elements in the simon section in a column instead of horizontally.*/
+    .simon-flex{
+        flex-direction: column;
+    }
+    /*Sets the width of the bold text in the simon section to 100% of the screen width, and removes the padding.*/
+    .simon-bold{
+        max-width: 100%;
+        padding: unset;
+    }
+    /*Sets the width of the text in the simon section to 100% of the screen width.*/
+    .simon-text{
+        max-width: 100%;
+    }
+    /*Resize button*/
+    .top-btn i:before{
+        font-size: 20px;
+    }
+    /*Sets the width of the about banner to 100% of the screen width.*/
+    .about-banner{
+        max-width: 100%;
+    }
+    /*Centers the image in the about's banner, and sets the width to 80% of the screen's width.*/
+    .about-img{
+        max-width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*Sets the width of the images on the about page to 100% of the screen width.*/
+    .about-img-wrap{
+        max-width: 100%;
+    }
+    /*Sets the width of the about card's image to 40%, and gives them a set height.*/
+    .about-card-img{
+        height: 450px;
+        width: 40%;
+    }
+    /*Lowers the height of the spread images used on the about page.*/
+    .spread-about-img{
+        height: 150px;
+    }
+    /*Sets the width of the about text to 100%, and removes the margin on them.*/
+    .about-text-section{
+        min-width: 100%;
+        margin: 0;
+    }
+    /*Sets the button with on the about spread to 50% of the page width.*/
+    .about-spread-button{
+        min-width: 50%;
+    }
+    /*Sets the line height in the about spread to center the text in the center, and adds padding to the top and bottom of it.*/
+    .about-spread{
+        line-height: 40px;
+        padding: 25px 0;
+    }
+    /*Changes elements with this class's flex flow to column so that they'd displayed vertically instead.*/
+    .flex-column{
+        flex-flow: column;
+    }
+    /*Sets the margin about the italic heading 4 text.*/
+    .heading4-italic{
+        margin-top: 50px;
+    }
+    /*Sets the width of the contact banner to 100% of the screen width.*/
+    .contact-banner{
+        max-width: 100%;
+    }
+    /*Sets the width of the contact location section to 100% of the screen width.*/
+    .contact-location{
+        max-width: 100%;
+    }
+    /*Centers the contact page's image, sets it's width to 70%, and adds margin under it.*/
+    .contact-img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        margin-bottom: 25px;
+    }
+    /*Sets the width of the contact form to 100% of the screen width, and adds margin under it.*/
+    .contact-form{
+        min-width: calc(100% - 50px);
+        margin-bottom: 25px;
+    }
+    /*Removes the margin from the sides of the map, removes some margin at the bottom to line it up with the footer, and adds margin above it to seperate it from other elements.*/
+    .map-wrap{
+        margin: 50px 0px -5px 0px;
+    }
+}
+@media screen and (max-width: 553px){
+    /*Sets the margin of everything in the margin div. I wanted some elements to span the whole page, so I didn't include them in the div.*/
+    .margin{
+        margin: 0 25px;
+    }
+    /*Sets the width of the icons to 50%, so that they would be displayed in rows of 2. It then sets their bottom margin so that they are spaced out.*/
+    .icons{
+        min-width: 50%;
+        margin-bottom: 25px;
+    }
+    /*Removes the margin from the button in the home banner.*/
+    .home-banner-button{
+        margin-top: unset;
+    }
+    /*Removes the about card images from the website.*/
+    .about-card-img{
+        display: none;
+    }
+    /*Set's the card's width to 100% of the screen width, and sets the margin above & below it.*/
+    .card{
+        width: 100%;
+        margin: 10px 0;
+    }
+    /*Sets the margin above the about spread to space it away from other elements on the website.*/
+    .about-spread{
+        margin-top: 50px;
+    }
+    /*Sets the width of the image on the contact page to 100%.*/
+    .contact-img{
+        width: 100%;
+    }
+    /*Sets the buttons width to 100% to fill the width of the contact form.*/
+    .contact-form-button{
+        width: 100%;
+    }
+    /*Displays the logos on the about page vertically, and centers them by setting their margins to auto.*/
+    .logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*Sets the font size on heading 2 text.*/
+    h2{
+        font-size: 48px;
+    }
+    /*Removes the float and the margin from the navigation bar links, and aligns them in the center of the page.*/
+    .nav{
+        float: none;
+        margin: 0;
+        text-align: center;
+    }
+    /*Removes the margin to the left of the navigation links, as they are no longer displayed horizontally to eachother.*/
+    .nav-link{
+        margin-left: 0;
+    }
+    /*Removes all list styles from the navigation bar, as well as the margin and padding that was previously applied.*/
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    /*Displays the list items vertically using block, sets the padding, removes text decorations, and sets the background color for the navigation links.*/
+    li a{
+        display: block;
+        padding: 15px 16px;
+        text-decoration: none;
+        background-color: #3c3b3a;
+    }
+    /*Changes the color of the naviagtion link's background when it is hovered over.*/
+    li a:hover{ 
+        background-color: #555;
+    }
+}

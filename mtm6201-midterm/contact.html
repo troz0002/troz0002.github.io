@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ARC - Contact</title>
+  <link rel="stylesheet" href="style.css"> <!--Links this HTML page to the CSS page-->
+  <script src="https://kit.fontawesome.com/3966738071.js" crossorigin="anonymous"></script> <!--Allows use of fontawesome icons-->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600i,700&display=swap" rel="stylesheet"> <!--Imports fonts from Google fonts-->
+</head>
+
+<body>
+<header>
+    <a href="index.html"> <img src="images/logo.svg" class="logo" alt="logo"> </a> <!--The sites logo, which links to the home page-->
+    <nav id="nav" class="nav"> <!--The navigation bar-->
+    <ul> <!--Unordered list that holds the navigation links-->
+        <li><a class="nav-link" href="index.html">Home</a></li> <!--Links to the home page, which is currently active making it bolded on the nav bar-->
+        <li><a class="nav-link" href="about.html">About</a></li> <!--Links to the about page-->
+        <li><a class="nav-link current" href="contact.html">Contact</a></li> <!--Links to the contact page, which is currently active making it bolded on the nav bar-->
+    </ul>
+    </nav>
+</header>  
+
+<div class="margin"> <!--Wraps around certain elements to add a margin to the whole right and left of the site-->
+    <section class="flex"> <!--Applys flex to everything inside this section-->
+    <section class="contact-banner"> <!--Holds the text and image section of the contact banner.-->
+        <h2>We Want to Hear From You!</h2> <!--Contact banner header-->
+        <p class="banner-sub">If you have an idea for an activity that you think you and your fellow students would love to participate in that we are not already offering, we want to know about it!</p> <!--Contact banner subheader-->
+        <img src="images/contact-img.svg" class="contact-img" alt="contact-img"> <!--The contact page's banner image-->
+    </section>
+
+    <section class="contact-form"> <!--Contact Form-->
+        <div class="contact-form-content"> <!--Selects the content inside of the section-->
+        <h2 class="heading2-contact-form">Contact Us.</h2> <!--Contact Form Header-->
+        <p class="contact-form-text">Full Name</p> <!--Creates the text above the input box-->
+        <div>
+            <input type="text" name="fullname" placeholder="Full Name"> <!--Creates the name input box-->
+        </div>
+        <p class="contact-form-text">Student Number</p> <!--Creates the text above the input box-->
+        <div>
+            <input type="text" name="studentnumber" placeholder="Student Number"> <!--Creates the student number input box-->
+        </div>
+        <p class="contact-form-text">Email Address</p> <!--Creates the text above the input box-->
+        <div>
+            <input type="email" name="em" placeholder="Email Address" required> <!--Creates the email text input box-->
+        </div>
+        <p class="contact-form-text">Message</p> <!--Creates the text above the input box-->
+            <textarea name="summery" id="summery" placeholder="Type here..."></textarea> <!--Creates the summery text input box-->
+        </div>
+        <div> 
+            <button class="contact-form-button" type="submit">Submit</button> <!--Creates the submit button-->
+        </div>
+    </section>
+    </section>
+
+    <section class="contact-location"> <!--This section holds the location information-->
+        <h2>Our Location.</h2> <!--Location information header-->
+        <p class="banner-sub">Algonquin College Student' Association</p> <!--Location information subheader-->
+        <p> <!--Location information text-->
+            Monday to Friday – 8:30am to 6:00pm <br>
+            1385 Woodroffe Avenue (E114) <br>
+            Ottawa, Ontario <br>
+            K2G 1V8 <br>
+            (613) 727-4723 x7711 <br>
+        </p>
+    </section>
+</div>
+
+<div class="map-wrap"> <!--Contains the embeded Google Map-->
+<section class="contact-map"> <!--This section holds the embeded Google Map, it's width and height are set here in the HTML-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.9453825812484!2d-75.75749558448341!3d45.34991477909977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce071896b71421%3A0x681ff23de354dd3d!2s1385%20Woodroffe%20Ave%2C%20Nepean%2C%20ON%20K2G%203G7!5e0!3m2!1sen!2sca!4v1575252101208!5m2!1sen!2sca" height="350" style="border:0;" allowfullscreen="">
+    </iframe>
+</section>
+</div>
+
+<footer>
+    <section class="footer-media"> <!--The section of the footer that contains all of the social media information-->
+    <p>Follow Us</p> <!--Text in the footer-->
+    <div class="social-media"> <!--A div to hold all of the social media icons-->
+        <a href="https://www.facebook.com/"><img src="icons/facebook.svg" alt="facebook" class="facebook"></a> <!--Adds a Facebook icon, and links to the website-->
+        <a href="https://www.instagram.com/"><img src="icons/instagram.svg" alt="instagram" class="instagram"></a> <!--Adds an Instagram icon, and links to the website-->
+        <a href="https://www.twitter.com/"><img src="icons/twitter.svg" alt="twitter" class="twitter"></a> <!--Adds a Twitter icon, and links to the website-->
+        <a href="https://www.youtube.com/"><img src="icons/youtube.svg" alt="youtube" class="youtube"></a> <!--Adds a Youtube icon, and links to the website-->
+    </div>
+    </section>
+
+    <div>
+        <a href="#top" class="top-btn" title="Top"> <!--Links the button to the top of the page when clicked-->
+        <i class="fas fa-arrow-circle-up" style="color: #26a682;"></i> </a> <!--Creates the button icon, which is an up arrow-->
+    </div>
+
+</footer>
+</body>
+</html>
