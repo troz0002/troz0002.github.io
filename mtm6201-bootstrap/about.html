@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Bootstrap This!</title>
+    </head>
+
+    <body>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+      <a href="index.html" class="navbar-brand">Bootstrap This!</a>
+      <button class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNav" class="collapse navbar-collapse">
+      <div class="navbar-nav">
+        <a href='index.html' class="nav-link">Home</a>
+        <a href='about.html' class="nav-link active">About</a>
+        <a href='contact.html' class="nav-link">Contact</a>
+      </div>
+      <div class="ml-auto">
+      <button class="btn btn-outline-light navbar-btn" onclick="location.href='https://getbootstrap.com/';">Get Bootstrap!</button>
+    </div>
+    </div>
+    </nav>
+
+    <!--Jumbotron-->
+    <main class="jumbotron jumbotron-fluid mb-0">
+    <div class="container-fluid text-center">
+        <h2 class="display-2 text-center">Learn</h2>
+        <h1 class="display-1 text-info font-weight-normal text-center mb-5">Bootstrap!</h1>
+    </div>
+    </main>  
+
+    <div id="spacing" class="text-center bg-info py-5 text-light display-2 mb-5">Spacing</div>
+    
+    <!--Column-->
+    <div class="container-fluid">
+    <div class="row justify-content-center">
+    <div class="col-lg-4 m-3">
+        <p class="text-justify">Rather than set the margin and padding on objects in CSS, Bootstrap allows both of these things to be done by applying classes to the objects in HTML.</p>
+            
+        <p class="text-justify">To set margin, you would give an object the class m. For padding, you would give an object the class p.From there, you must set the ammount of margin/padding you want the object to have ranging from .25rem (1) to 3rem (5). Class="m-3" for example would give the object 1rem of margin.</p>
+    </div>
+
+    <!--Column-->
+    <div class="col-lg-4 m-3">
+    <p class="text-justify">To apply margin/padding to spesific sides rather than all four sides at once, you can put an extra letter next to the m/p class name. These letters include t (top), b (bottom), l (left), r (right), x (x-axis, left & right) or y (y-axis, top & bottom).</p>
+    <p class="text-justify">Putting these to use, you would give an object the class "py-5" to apply 3rem of padding to the top and bottom of it for example. </p>
+    </div>
+    </div>
+    </div>
+
+    <div id="cards" class="text-center bg-info py-5 text-light display-2 my-5">Cards</div>
+    
+    <!--Column-->
+    <div class="container-fluid">
+    <div class="row justify-content-center">
+    <div class="col-lg-4 m-3">
+        <p class="text-justify">Bootstrap allows you to create highly customizable cards for your website to fit any need you could have for them. To create a basic card, you must first wrap all of the card's content in a div with the class "card".</p>
+
+        <p class="text-justify">From there, you will be able to begin adding in the content you desire into your card. To add an image, you would insert an img tag with the class "card-img-top/overlay" (top places the image regularly, overlay makes the card's background an overlay of the image.)</p>
+    </div>
+
+    <!--Column-->
+    <div class="col-lg-4 m-3">
+    <p class="text-justify">To add a title to the card, you would add a heading with the class "card-title", and to add regular text underneith that it would simply be a paragraph with the class "card-text".</p>
+
+    <p class="text-justify">You can also add headers and footers inside of your cards by using the "card-header" and "card-footer" classes at the top and bottom of your card respectively.</p>
+    </div>
+    </div>
+    </div>
+
+    <div id="buttons" class="text-center bg-info py-5 text-light display-2 my-5">Buttons</div>
+    
+    <!--Column-->
+    <div class="container-fluid">
+    <div class="row justify-content-center">
+    <div class="col-lg-4 m-3">
+        <p class="text-justify">Bootstrap allows the creation of defined buttons simply by applying a class to a button tag. Simply apply the class to "btn", and you'll have your button ready to go.</p>
+            
+        <p class="text-justify">As with all things in Bootstrap, there's a lot more that you can do than just that in order to customize the button to your likling, and to better fit the project that you're working on. For example, you are able to set the color of your button by applying a second class on the button tag, such as "btn-info" to give it a turquoise color (the same that is used on this very site). This of course works with all of Bootstrap's colors as well, such as primary (blue), danger (red), and sucsess (green).</p>
+    </div>
+
+    <!--Column-->
+    <div class="col-lg-4 m-3">
+    <p class="text-justify">Alongside setting the color, you may choose to add a bit more to the color class by setting the button's style to an outline instead. This is done by simply adding the word "outline" before the color in the class (ex. btn-outline-info). </p>
+
+    <p class="text-justify">If you wish to change the sizing of your button, you have a few different ways to do so. One of which ways is applying the classes "btn-lg" or "btn-sm" to the button tag in order to make it larger or smaller respectively. However, you may also choose to make a block-level button that spans the full width of it's parent by applying the class "btn-block" to the button tag.</p>
+    </div>
+    </div>
+    </div>
+
+    <div id="grids" class="text-center bg-info py-5 text-light display-2 my-5">Grids</div>
+    
+    <!--Column-->
+    <div class="container-fluid">
+    <div class="row justify-content-center">
+    <div class="col-lg-4 m-3">
+        <p class="text-justify">Bootstrap utilizes flexbox in order to create a grid system based on containers, rows, and columns. To create a grid of content, you must first wrap all of your content in a div with the class "container" ("container-fluid" if you want it to be responsive) in order to center the content.</p>
+            
+        <p class="text-justify">From there, you once again want to wrap the content inside of another div with the class "row". This forms the gutter space evenly between your content, which will be broken up into columns. In order to create these columns however, you must apply the "col" class to the div that wraps around the content you want in each column.</p>
+
+        <p class="text-justify">Each row has 12 columns, and as such you are able to set the width of your content by applying how many columns you wish for it to take up. If you wanted a 50/50 split between 2 columns of content, you would set the col class for both sides of your column to "col-6", making them take up a total of 12 columns together. </p>
+    </div>
+
+    <!--Column-->
+    <div class="col-lg-4 m-3">
+    <p class="text-justify">Alongside setting the ammount of rows a column takes up, you can also set breakpoints for your columns. These breakpoints include small (col-sm-#) (>576px), medium (col-md-#) (>768px), large (col-lg-#) (>992px), and extra large (col-xl-#) (>1200px).</p>
+
+    <p class="text-justify">You may also choose to change the ordering of your columns. To do so, you can simply apply the class "order-#" (# being anything from columns 1 - 12), and the column will be placed in that order. However, if you're looking to make a simple change such as making one column become the first or last, the classes "order-first", "order-last" may be best for you.</p>
+
+    <p class="text-justify">You may also find it desirable to space out your columns in different alignments and rows. To do so, you can offset your columns by applying the class "offset-#" (# once again being anything from columns 1 - 12) in order to push that column's content over from the right side as many columns as you set. Doing so will wrap content that is pushed past the 12 column limit onto the next row of 12 beneath it.</p>
+    </div>
+    </div>
+    </div>
+
+<!-- Footer -->
+<footer class="page-footer font-small bg-secondary text-light pt-4 mt-5">
+  <div class="container-fluid text-center">
+    <!-- Grid row -->
+    <div class="row justify-content-center">
+      <!-- Grid column -->
+      <div class="col-md-4 mt-md-0">
+        <!-- Content -->
+        <h5 class="text-uppercase">How will you use Bootstrap?</h5>
+        <p>Check out 
+        <a href="https://expo.getbootstrap.com/" class="text-info">Bootstrap Expo</a>
+        to see what other featured creators have been using Bootstrap to create. We look forward to seeing how you will use Bootstrap.</p>
+      </div>
+
+      <div class="col-md-4 mb-md-0">
+        <h5 class="text-uppercase">Navigation</h5>
+        <!-- Links -->
+        <ul class="list-unstyled">
+          <li>
+            <a href="index.html" class="text-light">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="text-light">About</a>
+          </li>
+          <li>
+            <a href="contact.html" class="text-light">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center bg-dark py-3">©2020 Copyright:
+    <a href="https://getbootstrap.com/" class="text-info">Bootstrap</a>
+    & Josh Trozzo</div>
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
