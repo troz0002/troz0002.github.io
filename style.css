@@ -1,0 +1,56 @@
+/*This change's bootstrap usual blue to the color I wanted for my website*/
+.bg-primary {
+    background-color: #F95759!important;
+}
+/*This change's bootstrap usual blue to the color I wanted for my website*/
+.text-primary, a.text-primary:hover, a.text-primary:visited{
+    color: #F95759!important;
+}
+/*This change's bootstrap usual blue to the color I wanted for my website*/
+.btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary:visited {
+    color: #F95759!important;
+    border-color: #F95759!important;
+}
+/*This change's bootstrap usual blue to the color I wanted for my website*/
+.btn-outline-primary:hover{
+    background-color: #F95759!important;
+    color: #ffffff!important;
+}
+/*This added more padding to the top of jumbotrons*/
+.jumbotron{
+    padding-top: 6rem;
+}
+/*Changes the margin of objects with this class*/
+.mb--1{
+    margin-bottom: -1rem!important;
+}
+/*Changes the margin of objects with this class*/
+.mb---1{
+    margin-bottom: -3rem!important;
+}
+/*Changes the margin of objects with this class*/
+.mb-6{
+    margin-bottom: 4.5rem!important;
+}
+/*Changes the margin of objects with this class*/
+.mt-6{
+    margin-top: 2rem!important;
+}
+/*Changes the margin of objects with this class*/
+.mt-7{
+    margin-top: 7rem!important;
+}
+/*Changes the font size of text with this class*/
+.display-1{
+    font-size: 8rem;
+}
+/*Sets the line height of text with this class.*/
+.line-height{
+    line-height: 80px;
+}
+/*This change's bootstrap usual blue to the color I wanted for my website*/
+.form-background{
+    background-color: #F95759;
+    padding: 2rem;
+    border-radius: 10px;
+}
